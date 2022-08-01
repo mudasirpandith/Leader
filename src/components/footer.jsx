@@ -60,7 +60,7 @@ const FooterSocialMedia = styled.div`
 `;
 const FooterItems = styled.div`
   font-size: 15px;
-
+  cursor: pointer;
   padding: 4px;
 `;
 const CopyRight = styled.div`

@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #fcf8e8;
+  background-color: #eeeeee;
   padding: 20px 50px;
   gap: 10px;
 `;
@@ -76,6 +76,7 @@ const LoginPage = () => {
   }
 
   useEffect(() => {
+    document.title="Login Leaders"
     let isActive = true;
     if (isActive) {
       getData();

@@ -10,6 +10,7 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
 import FooterElement from "../components/footer";
+import Testmonials from "../components/testmonials";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -75,6 +76,7 @@ const Section2 = styled.div`
   display: flex;
   margin: 10px 30px;
   color: #354259;
+
   gap: 30px;
   @media (max-width: 450px) {
     flex-direction: column;
@@ -112,11 +114,18 @@ const Section3 = styled.div`
 const Section3Heading = styled.h1`
   display: flex;
   flex: 3;
+  color: #354259;
   margin: 10px 30px;
 `;
 const Section3Cards = styled.div`
   color: #354259;
   display: flex;
+  gap: 10px;
+`;
+const TestmonialsSection = styled.div`
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 `;
 
 const HomePage = () => {
@@ -135,7 +144,7 @@ const HomePage = () => {
       >
         <Wrapper>
           <TextPart>
-            <Heading> Want to excel in NEET 2023 ?</Heading>
+            <Heading> Want to excel in NEET/JEE 2023 ?</Heading>
             <SubHeading>Join us to top the exam.</SubHeading>
             <Link to="/login" style={{ textDecoration: "none" }}>
               <Button endIcon={<ArrowForwardIosSharp />} variant="contained">
@@ -148,7 +157,7 @@ const HomePage = () => {
           </ImagePart>
         </Wrapper>
       </div>
-      <Hr />
+
       <Section2>
         <Section2Heading>What we do?</Section2Heading>
         <Section2Details>
@@ -164,13 +173,13 @@ const HomePage = () => {
           doloribus laboriosam sed possimus explicabo corrupti ea nostrum illo.
         </Section2Details>
       </Section2>
-      <Hr />
+
       <Section3>
         <Section3Heading>New Tests</Section3Heading>
         <Section3Cards>
           <Box
             sx={{
-              maxWidth: window.innerWidth,
+              maxWidth: window.innerWidth - 30,
             }}
           >
             <Tabs
@@ -187,16 +196,16 @@ const HomePage = () => {
               <Tab label={<SmallCards />} /> <Tab label={<SmallCards />} />{" "}
               <Tab label={<SmallCards />} /> <Tab label={<SmallCards />} />{" "}
               <Tab label={<SmallCards />} /> <Tab label={<SmallCards />} />{" "}
-              <Tab label={<SmallCards />} /> <Tab label={<SmallCards />} />{" "}
-              <Tab label={<SmallCards />} /> <Tab label={<SmallCards />} />{" "}
-              <Tab label={<SmallCards />} /> <Tab label={<SmallCards />} />{" "}
-              <Tab label={<SmallCards />} /> <Tab label={<SmallCards />} />{" "}
-              <Tab label={<SmallCards />} /> <Tab label={<SmallCards />} />{" "}
               <Tab label={<SmallCards />} />{" "}
             </Tabs>
           </Box>
         </Section3Cards>
       </Section3>
+      <Section3Heading>Testimonials</Section3Heading>
+      <TestmonialsSection>
+        <Testmonials /> <Testmonials /> <Testmonials /> <Testmonials />{" "}
+        <Testmonials />
+      </TestmonialsSection>
       <FooterElement />
     </Container>
   );

@@ -1,7 +1,7 @@
 import "./App.css";
 import { Navbar } from "responsive-navbar-react";
 import "responsive-navbar-react/dist/index.css";
-import { BrowserRouter, Route, Routes ,Link} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import HomePage from "./Pages/HomePage";
 import Logo from "../src/Images/logo.png";
@@ -10,7 +10,7 @@ import LoginPage from "./Pages/LoginPage";
 import RegisterPage from "./Pages/RegisterPage";
 const Container = styled.div`
   display: flex;
-  flex: 1;
+  flex: 100%;
 `;
 const Nav = styled.div`
   width: 100%;
@@ -24,7 +24,7 @@ function App() {
     items: [
       {
         text: "Home",
-        link:"/",
+        link: "/",
       },
       {
         text: "Doc",
@@ -68,7 +68,7 @@ function App() {
   };
   return (
     <>
-      <Nav className="home">
+      <Nav>
         <Navbar {...props} />
       </Nav>
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useNavigate, Link } from "react-router-dom";
 import TextField from "@mui/material/TextField";
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   flex-direction: column;
 
   padding: 20px 50px;
-  background-color: #fcf8e8;
+  background-color: #eeeeee;
   gap: 5px;
 `;
 
@@ -41,6 +41,10 @@ const MessageStyle = styled.p`
   color: red;
 `;
 const RegisterPage = () => {
+  useEffect(() => {
+    document.title = "Register Leaders";
+  }, []);
+
   const navigate = useNavigate();
   const [message, setMessage] = useState("");
   const [spinner, setSpinner] = useState(false);
