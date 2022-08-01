@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import LogoImage from "../Images/logo.png";
 import {
-
   FacebookOutlined,
   Instagram,
   LinkedIn,
@@ -73,7 +73,11 @@ const FooterElement = () => {
     <>
       <Footer>
         <FooterBranding>
-          <Logo src={LogoImage} />
+          <Link style={{ textDecoration: "none" }} to="/">
+            {" "}
+            <Logo src={LogoImage} />
+          </Link>
+
           <FooterItems>
             We are the <strong>Revolution</strong>.
           </FooterItems>

@@ -136,7 +136,7 @@ const HomePage = () => {
         <Wrapper>
           <TextPart>
             <Heading> Want to excel in NEET 2023 ?</Heading>
-            <SubHeading>We prepare students to top the exams</SubHeading>
+            <SubHeading>Join us to top the exam.</SubHeading>
             <Link to="/login" style={{ textDecoration: "none" }}>
               <Button endIcon={<ArrowForwardIosSharp />} variant="contained">
                 Sign Up

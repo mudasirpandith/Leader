@@ -1,7 +1,7 @@
 import "./App.css";
 import { Navbar } from "responsive-navbar-react";
 import "responsive-navbar-react/dist/index.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes ,Link} from "react-router-dom";
 import styled from "styled-components";
 import HomePage from "./Pages/HomePage";
 import Logo from "../src/Images/logo.png";
@@ -24,7 +24,7 @@ function App() {
     items: [
       {
         text: "Home",
-        link: "/",
+        link:"/",
       },
       {
         text: "Doc",
