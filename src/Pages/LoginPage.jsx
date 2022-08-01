@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { TailSpin } from "react-loader-spinner";
-
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
