@@ -1,10 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Navbar } from "responsive-navbar-react";
 import "responsive-navbar-react/dist/index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import HomePage from "./Pages/HomePage";
+import Logo from "../src/Images/logo.png";
 const Container = styled.div`
   display: flex;
   flex: 1;
@@ -12,8 +12,10 @@ const Container = styled.div`
 const Nav = styled.div`
   width: 100%;
   position: sticky;
+  z-index: 1;
   top: 0px;
 `;
+const Image = styled.img``;
 function App() {
   const props = {
     items: [
@@ -35,17 +37,24 @@ function App() {
       },
     ],
     logo: {
-      text: "Leaders",
+      text: <Image src={Logo} alt="Leaders" />,
     },
     style: {
       barStyles: {
         background: "white",
-        color: "grey",
+        color: "blue",
       },
       sidebarStyles: {
         background: "white",
-
-        buttonColor: "grey",
+        color: "black",
+        buttonColor: "blue",
+      },
+      logoStyles: {
+        fontSize: "30px",
+        color: "blue",
+      },
+      linkStyles: {
+        color: "black",
       },
     },
   };

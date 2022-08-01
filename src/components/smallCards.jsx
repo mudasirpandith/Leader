@@ -8,7 +8,7 @@ const Container = styled.div`
   height: 130px;
   border-radius: 10px;
   background-color: #c4dfaa;
-  cursor:pointer;
+  cursor: pointer;
 `;
 const Text = styled.div`
   display: flex;
