@@ -8,6 +8,7 @@ import SmallCards from "../components/smallCards";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
+import { Link } from "react-router-dom";
 import FooterElement from "../components/footer";
 const Container = styled.div`
   display: flex;
@@ -136,9 +137,11 @@ const HomePage = () => {
           <TextPart>
             <Heading> Want to excel in NEET 2023 ?</Heading>
             <SubHeading>We prepare students to top the exams</SubHeading>
-            <Button endIcon={<ArrowForwardIosSharp />} variant="contained">
-              Sign Up
-            </Button>
+            <Link to="/login" style={{ textDecoration: "none" }}>
+              <Button endIcon={<ArrowForwardIosSharp />} variant="contained">
+                Sign Up
+              </Button>
+            </Link>
           </TextPart>
           <ImagePart>
             <Image src={HomeImage} />
@@ -163,7 +166,7 @@ const HomePage = () => {
       </Section2>
       <Hr />
       <Section3>
-        <Section3Heading>New Test</Section3Heading>
+        <Section3Heading>New Tests</Section3Heading>
         <Section3Cards>
           <Box
             sx={{

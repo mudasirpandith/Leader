@@ -5,6 +5,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import HomePage from "./Pages/HomePage";
 import Logo from "../src/Images/logo.png";
+import { AccountCircle } from "@mui/icons-material";
+import LoginPage from "./Pages/LoginPage";
+import RegisterPage from "./Pages/RegisterPage";
 const Container = styled.div`
   display: flex;
   flex: 1;
@@ -35,9 +38,14 @@ function App() {
         text: "Contact",
         link: "/",
       },
+      {
+        text: <AccountCircle />,
+        link: "/login",
+      },
     ],
     logo: {
       text: <Image src={Logo} alt="Leaders" />,
+      link: "/",
     },
     style: {
       barStyles: {
@@ -69,6 +77,8 @@ function App() {
           <Routes>
             <Route path="/">
               <Route index element={<HomePage />} />
+              <Route path="login" element={<LoginPage />} />
+              <Route path="register" element={<RegisterPage />} />
             </Route>
           </Routes>
         </BrowserRouter>
